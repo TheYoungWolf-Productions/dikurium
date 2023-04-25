@@ -5,6 +5,7 @@ import { client } from "@/lib/apollo-client";
 import { useMutation, useQuery } from "@apollo/client";
 import Card from "@/components/card/card";
 import { ADD_STAR_MUTATION, GET_REPOSITORIES, REMOVE_STAR_MUTATION } from "@/lib/endpoints";
+import { FooterLinks } from "@/components/footer/footer";
 
 interface Props {
   repos: any[];
@@ -97,6 +98,54 @@ export default function Home({ repos, starredRepos }: Props): JSX.Element {
           </div>
         </div>
       </main>
+      <footer>
+        <FooterLinks
+          data={[
+            {
+              title: "References",
+              links: [
+                {
+                  label: "Next Docs",
+                  link: "https://nextjs.org/docs",
+                },
+                {
+                  label: "Github API",
+                  link: "https://docs.github.com/en/graphql/overview/about-the-graphql-api",
+                },
+                {
+                  label: "MantineUI",
+                  link: "https://mantine.dev/pages/basics/",
+                },
+                {
+                  label: "GraphQL",
+                  link: "https://www.apollographql.com/docs/react/",
+                },
+              ],
+            },
+            {
+              title: "Personal",
+              links: [
+                {
+                  label: "Resume",
+                  link: "https://drive.google.com/file/d/19K6xvFUIEC3VhDscFsduDwH8BqayWmez/view?usp=sharing",
+                },
+                {
+                  label: "LinkedIn",
+                  link: "https://www.linkedin.com/in/syedafraz-theyoungwolf/",
+                },
+                {
+                  label: "Github",
+                  link: "https://github.com/TheYoungWolf-Productions",
+                },
+                {
+                  label: "Twitter",
+                  link: "https://twitter.com/Afraz44845",
+                },
+              ],
+            },
+          ]}
+        />
+      </footer>
     </>
   );
 }
