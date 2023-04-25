@@ -28,4 +28,4 @@ This is a dummy project created to exercise usage of Next, React, MantineUI and 
 
 ## Demo 
 
-Visit the demo hosted on [Vercel](https://www.google.com)
+Visit the demo hosted on [vercel](https://dikurium.vercel.app/)
